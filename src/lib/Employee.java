@@ -102,4 +102,16 @@ public class Employee {
 		
 		return TaxFunction.calculateTax(monthlySalary, otherMonthlyIncome, monthWorkingInYear, annualDeductible, spouseIdNumber.equals(""), childIdNumbers.size());
 	}
+
+	public static void main(String[] args) {
+        // Contoh penggunaan kelas Employee
+        Employee employee = new Employee("001", "John", "Doe", "1234567890", "Jalan Jendral Sudirman No. 1", 2020, 1, 1, false, true);
+        employee.setMonthlySalary(2);
+        employee.setAnnualDeductible(50000000);
+        employee.setAdditionalIncome(10000000);
+        employee.setSpouse("Jane", "0987654321");
+        employee.addChild("Jack", "1111111111");
+        employee.addChild("Jill", "2222222222");
+        System.out.println("Annual Income Tax: " + employee.getAnnualIncomeTax());
+    }
 }
